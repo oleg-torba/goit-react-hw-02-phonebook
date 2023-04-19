@@ -13,3 +13,90 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+p, h2, ul {
+  margin: 0;
+}
+
+h2{
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.form{
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  outline: 1px solid black;
+  width: 50%;
+  background-color: bisque;
+  margin: 0 auto 20px auto;
+}
+p{
+  font-weight: 600;
+}
+.formInput{
+  outline: none;
+  width: 100%;
+  height: 25px;
+  border: 1.5px solid;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.formBtn{
+  width: 50%;
+  background-color: blue;
+  border: none;
+  border-radius: 3px;
+  height: 30px;
+  margin: 0 auto;
+  color: aliceblue;
+  
+}
+
+.contactsList{
+ display: flex;
+  flex-wrap: wrap;
+ padding: 0;
+}
+
+.contact{
+  display: flex;
+  flex-direction: column;
+ 
+  width: 200px;
+  outline: 1px solid;
+  margin-bottom: 10px;
+  padding: 10px;
+  /* margin-top: 20px; */
+  background-color: aqua;
+}
+.contactValue{
+  font-weight: 600;
+}
+
+.contactBlock{
+  display: flex;
+  
+  align-items: center;
+  justify-content: center;
+}
+
+.contactBtn{
+  margin-top: 10px;
+}
+
+li{
+  list-style-type: none;
+  margin-right: 10px;
+}
+.find{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container{
+  padding: 40px;
+}
