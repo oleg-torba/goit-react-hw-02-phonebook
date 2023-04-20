@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export class Form extends Component {
   state = {
@@ -18,16 +19,18 @@ export class Form extends Component {
   };
 
   resetForm() {
-    this.setState({ 
-        name: '',
-    number: '' });
+    this.setState({
+      name: '',
+      number: '',
+    });
   }
   render() {
     return (
-      <form className='form' onSubmit={this.handleSubmit}>
+      <form className="form" onSubmit={this.handleSubmit}>
         <label>
           <p>Name</p>
-          <input className='formInput'
+          <input
+            className="formInput"
             type="text"
             name="name"
             value={this.state.name}
@@ -36,12 +39,12 @@ export class Form extends Component {
             required
             onChange={this.handleChange}
           />
-        
         </label>
 
         <label>
-         <p>Number</p>
-          <input className='formInput'
+          <p>Number</p>
+          <input
+            className="formInput"
             type="tel"
             name="number"
             value={this.state.number}
@@ -51,8 +54,14 @@ export class Form extends Component {
             onChange={this.handleChange}
           />
         </label>
-        <button className='formBtn' type="submit">Add contact</button>
+        <button className="formBtn" type="submit">
+          Add contact
+        </button>
       </form>
     );
   }
 }
+
+Form.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
+};

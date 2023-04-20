@@ -7,44 +7,48 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: blanchedalmond;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-p, h2, ul {
+p,
+h2,
+ul {
   margin: 0;
 }
 
-h2{
+h2 {
   text-align: center;
   margin-bottom: 10px;
 }
 
-.form{
+.form {
   padding: 20px;
   display: flex;
   flex-direction: column;
-  outline: 1px solid black;
-  width: 50%;
+  border: 1.5px solid lightcoral;
+  border-radius: 3px;
+  width: 450px;
   background-color: bisque;
-  margin: 0 auto 20px auto;
+  margin: 0 auto;
 }
-p{
+p {
   font-weight: 600;
 }
-.formInput{
+.formInput {
   outline: none;
   width: 100%;
   height: 25px;
-  border: 1.5px solid;
-  border-radius: 3px;
+  border: 1.5px solid lightcoral;
+  border-radius: 4px;
   margin-bottom: 10px;
   margin-top: 10px;
 }
 
-.formBtn{
+button {
   width: 50%;
   background-color: blue;
   border: none;
@@ -52,51 +56,58 @@ p{
   height: 30px;
   margin: 0 auto;
   color: aliceblue;
-  
 }
 
-.contactsList{
- display: flex;
+.contactsList {
+  display: flex;
   flex-wrap: wrap;
- padding: 0;
+  padding: 0;
+  padding: 20px;
 }
 
-.contact{
+.contact {
   display: flex;
   flex-direction: column;
- 
+
   width: 200px;
-  outline: 1px solid;
+  border: 1.5px solid lightcoral;
+  border-radius: 4px;
   margin-bottom: 10px;
   padding: 10px;
-  /* margin-top: 20px; */
   background-color: aqua;
 }
-.contactValue{
+.contactValue {
+  display: inline-block;
+  color: darkorange;
   font-weight: 600;
+  margin-bottom: 5px;
 }
 
-.contactBlock{
+.contactBlock {
   display: flex;
-  
+
   align-items: center;
   justify-content: center;
 }
 
-.contactBtn{
+.contactBtn {
   margin-top: 10px;
 }
 
-li{
+li {
   list-style-type: none;
   margin-right: 10px;
 }
-.find{
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.find {
+  width: 350px;
+  margin: 0 auto;
+  margin-bottom: 20px;
 }
 
-.container{
-  padding: 40px;
+.section {
+  padding: 20px 40px;
+}
+
+.title {
+  text-align: center;
 }

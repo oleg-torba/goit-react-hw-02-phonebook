@@ -1,4 +1,7 @@
-export function Contact({ contacts, remove }) {
+import React from 'react';
+import PropTypes from 'prop-types';
+
+export function Contact({ contacts, removeContact }) {
   return (
     <div className="contactBlock">
       <ul className="contactsList">
@@ -7,14 +10,18 @@ export function Contact({ contacts, remove }) {
             <>
               <li className="contactsItem" key={item.id}>
                 <div className="contact">
-                  <span><span className="contactValue">Name:</span> {item.data.name}</span>
-                  <span><span className="contactValue">Number:</span> {item.data.number}</span>
-                  <button className="contactBtn" type="button" onClick={() => remove(item.id)}>
-                Delete
-              </button>
+                  <span>
+                    <span className="contactValue">Name:</span> {item.data.name}
+                  </span>
+                  <span>
+                    <span className="contactValue">Number:</span>{' '}
+                    {item.data.number}
+                  </span>
+                  <button type="button" onClick={() => removeContact(item.id)}>
+                    Delete
+                  </button>
                 </div>
               </li>
-             
             </>
           );
         })}
@@ -22,3 +29,16 @@ export function Contact({ contacts, remove }) {
     </div>
   );
 }
+
+Contact.propTypes = {
+  contacts: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      data: PropTypes.shape({
+        name: PropTypes.string.isRequired,
+        number: PropTypes.string.isRequired,
+      }),
+    })
+  ),
+  removeContact: PropTypes.func.isRequired,
+};
