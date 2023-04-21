@@ -13,11 +13,11 @@ export class App extends Component {
   };
 
   formSubmit = data => {
-    const findDublicate = this.state.contacts.every(
-      contact => contact.data.name !== data.name
+    const findDublicate = this.state.contacts.some(
+      contact => contact.data.name.toLowerCase() === data.name.toLowerCase()
     );
 
-    if (!findDublicate) {
+    if (findDublicate) {
       alert(`${data.name} already exsist`);
       return;
     }
